@@ -1,0 +1,5 @@
+.navbar-brand {
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
