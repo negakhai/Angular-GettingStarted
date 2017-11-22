@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
@@ -16,7 +17,8 @@ describe('AppComponent', () => {
         StarComponent
       ],
       imports: [
-        FormsModule
+        FormsModule,
+        HttpClientModule
       ]
     }).compileComponents();
   }));
