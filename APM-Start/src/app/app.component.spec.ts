@@ -1,13 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { ProductListComponent } from './products/product-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
-      ],
+        AppComponent,
+        ProductListComponent        
+      ],      
     }).compileComponents();
   }));
 
@@ -17,16 +19,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'Angular: Getting Started'`, async(() => {
+  it(`should have 'Acme Product Manager' as title`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Angular: Getting Started');
+    expect(app.pageTitle).toEqual('Acme Product Manager');
   }));
 
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Angular: Getting Started!!');
+    expect(compiled.querySelector('h1').textContent).toContain('Acme Product Manager');
   }));
 });

@@ -7,8 +7,8 @@ describe('apm App', () => {
     page = new APMPage();
   });
 
-  it('should display welcome message', () => {
+  it(`should display page title as 'Acme Product Manager'`, () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to Angular: Getting Started!!');
+    expect(page.getParagraphText()).toEqual('Acme Product Manager');
   });
 });
